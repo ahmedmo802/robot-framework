@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.4 on win32)" generated="2024-11-26T15:22:51.354530" rpa="false" schemaversion="5">
+<suite id="s1" name="Login And Logout" source="C:\Users\14192\HelloPython\robot_test_project\tests\smoke_tests\login_and_logout.robot">
+<test id="s1-t1" name="Verify Login Page Elements" line="12">
+<kw name="Open The Login Page" owner="common" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:22:51.604352" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-11-26T15:22:51.604352" elapsed="1.799844"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:22:53.404196" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-26T15:22:53.404196" elapsed="2.405299"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-26T15:22:55.810495" elapsed="0.017667"/>
+</kw>
+<status status="PASS" start="2024-11-26T15:22:51.603346" elapsed="4.224816"/>
+</kw>
+<kw name="Verify Login Form Elements">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://input[@name='username']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-26T15:22:55.828162" elapsed="0.328349"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://input[@name='password']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-26T15:22:56.156511" elapsed="0.009530"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-26T15:22:56.166041" elapsed="0.016593"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://p[text()='Forgot your password? ']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-26T15:22:56.182634" elapsed="0.016893"/>
+</kw>
+<status status="PASS" start="2024-11-26T15:22:55.828162" elapsed="0.371365"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:22:56.399190" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../screenshots/Verify%20Login%20Form%20Elements_step1.png"&gt;&lt;img src="../../screenshots/Verify%20Login%20Form%20Elements_step1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}/Verify Login Form Elements_step1.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-11-26T15:22:56.199527" elapsed="0.199663"/>
+</kw>
+<kw name="Add Step" owner="Pdf">
+<arg>Verify Login Page Elements</arg>
+<arg>${SCREENSHOT_DIR}/Verify Login Form Elements_step1.png</arg>
+<status status="PASS" start="2024-11-26T15:22:56.399190" elapsed="0.015624"/>
+</kw>
+<kw name="Generate Final PDF" owner="common">
+<kw name="Save Pdf" owner="Pdf">
+<msg time="2024-11-26T15:22:56.416198" level="INFO">${pdf_path} = C:/Users/14192/HelloPython/robot_test_project/Results/Verify Login Page Elements_26_11_24_15_22.pdf</msg>
+<var>${pdf_path}</var>
+<arg>${TEST_NAME}</arg>
+<status status="PASS" start="2024-11-26T15:22:56.416198" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-26T15:22:56.424715" level="INFO">PDF saved at C:/Users/14192/HelloPython/robot_test_project/Results/Verify Login Page Elements_26_11_24_15_22.pdf</msg>
+<arg>PDF saved at ${pdf_path}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-26T15:22:56.416198" elapsed="0.008517"/>
+</kw>
+<arg>Verify Login Page Elements</arg>
+<status status="PASS" start="2024-11-26T15:22:56.415787" elapsed="0.008928"/>
+</kw>
+<status status="PASS" start="2024-11-26T15:22:51.603346" elapsed="4.821369"/>
+</test>
+<test id="s1-t2" name="Login with Valid Credentials" line="17">
+<kw name="Open The Login Page" owner="common" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:22:56.424715" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-11-26T15:22:56.424715" elapsed="1.928193"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:22:58.353905" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-26T15:22:58.352908" elapsed="2.110095"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-26T15:23:00.464002" elapsed="0.024273"/>
+</kw>
+<status status="PASS" start="2024-11-26T15:22:56.424715" elapsed="4.063560"/>
+</kw>
+<kw name="Enter Credentials" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://input[@name='username']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-26T15:23:00.489326" elapsed="0.437842"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:00.927168" level="INFO">Typing text 'Admin' into text field 'xpath://input[@name='username']'.</msg>
+<arg>xpath://input[@name='username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T15:23:00.927168" elapsed="0.073860"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:01.001028" level="INFO">Typing password into text field 'xpath://input[@name='password']'.</msg>
+<msg time="2024-11-26T15:23:01.016052" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T15:23:01.001028" elapsed="0.061418"/>
+</kw>
+<arg>${valid_username}</arg>
+<arg>${valid_password}</arg>
+<status status="PASS" start="2024-11-26T15:23:00.489326" elapsed="0.573120"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:01.155837" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../screenshots/valid%20credentials%20login.png"&gt;&lt;img src="../../screenshots/valid%20credentials%20login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}/valid credentials login.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-11-26T15:23:01.062446" elapsed="0.093391"/>
+</kw>
+<kw name="Add Step" owner="Pdf">
+<arg>valid credentials login</arg>
+<arg>${SCREENSHOT_DIR}/valid credentials login.png</arg>
+<status status="PASS" start="2024-11-26T15:23:01.155837" elapsed="0.013902"/>
+</kw>
+<kw name="Click Login Button" owner="common">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:01.170740" level="INFO">Clicking button 'xpath://button'.</msg>
+<arg>xpath://button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T15:23:01.170740" elapsed="0.987338"/>
+</kw>
+<status status="PASS" start="2024-11-26T15:23:01.170740" elapsed="0.987338"/>
+</kw>
+<kw name="Verify Successful Login" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h6</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-26T15:23:02.158078" elapsed="0.517769"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:02.701617" level="INFO">${dashboard_text} = Dashboard</msg>
+<var>${dashboard_text}</var>
+<arg>//h6</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T15:23:02.675847" elapsed="0.025770"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-26T15:23:02.701617" level="INFO">Dashboard</msg>
+<arg>${dashboard_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-26T15:23:02.701617" elapsed="0.000000"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:02.701617" level="INFO">Verifying element '//h6' contains exact text 'Dashboard'.</msg>
+<arg>//h6</arg>
+<arg>${dashboard_text}</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-11-26T15:23:02.701617" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-26T15:23:02.158078" elapsed="0.543539"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:02.870110" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../screenshots/Successful%20Login.png"&gt;&lt;img src="../../screenshots/Successful%20Login.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}/Successful Login.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-11-26T15:23:02.701617" elapsed="0.168493"/>
+</kw>
+<kw name="Add Step" owner="Pdf">
+<arg>Successful Login</arg>
+<arg>${SCREENSHOT_DIR}/Successful Login.png</arg>
+<status status="PASS" start="2024-11-26T15:23:02.870110" elapsed="0.000000"/>
+</kw>
+<kw name="Generate Final PDF" owner="common">
+<kw name="Save Pdf" owner="Pdf">
+<msg time="2024-11-26T15:23:02.885663" level="INFO">${pdf_path} = C:/Users/14192/HelloPython/robot_test_project/Results/Login with Valid Credentials_26_11_24_15_23.pdf</msg>
+<var>${pdf_path}</var>
+<arg>${TEST_NAME}</arg>
+<status status="PASS" start="2024-11-26T15:23:02.885663" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-26T15:23:02.885663" level="INFO">PDF saved at C:/Users/14192/HelloPython/robot_test_project/Results/Login with Valid Credentials_26_11_24_15_23.pdf</msg>
+<arg>PDF saved at ${pdf_path}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-26T15:23:02.885663" elapsed="0.000000"/>
+</kw>
+<arg>Login with Valid Credentials</arg>
+<status status="PASS" start="2024-11-26T15:23:02.870110" elapsed="0.015553"/>
+</kw>
+<status status="PASS" start="2024-11-26T15:22:56.424715" elapsed="6.460948"/>
+</test>
+<test id="s1-t3" name="Logout Functionality" line="26">
+<kw name="Open The Login Page" owner="common" type="SETUP">
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:02.885663" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2024-11-26T15:23:02.885663" elapsed="2.132926"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:05.018589" level="INFO">Opening url 'https://opensource-demo.orangehrmlive.com/'</msg>
+<arg>https://opensource-demo.orangehrmlive.com/</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-11-26T15:23:05.018589" elapsed="2.051603"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-11-26T15:23:07.070192" elapsed="0.030084"/>
+</kw>
+<status status="PASS" start="2024-11-26T15:23:02.885663" elapsed="4.215615"/>
+</kw>
+<kw name="Enter Credentials" owner="common">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://input[@name='username']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-26T15:23:07.103271" elapsed="0.434447"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:07.537718" level="INFO">Typing text 'Admin' into text field 'xpath://input[@name='username']'.</msg>
+<arg>xpath://input[@name='username']</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T15:23:07.537718" elapsed="0.094651"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:07.632369" level="INFO">Typing password into text field 'xpath://input[@name='password']'.</msg>
+<msg time="2024-11-26T15:23:07.665640" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>xpath://input[@name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T15:23:07.632369" elapsed="0.083972"/>
+</kw>
+<arg>${valid_username}</arg>
+<arg>${valid_password}</arg>
+<status status="PASS" start="2024-11-26T15:23:07.102272" elapsed="0.614069"/>
+</kw>
+<kw name="Click Login Button" owner="common">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:07.716341" level="INFO">Clicking button 'xpath://button'.</msg>
+<arg>xpath://button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T15:23:07.716341" elapsed="0.106003"/>
+</kw>
+<status status="PASS" start="2024-11-26T15:23:07.716341" elapsed="0.106003"/>
+</kw>
+<kw name="Click on Logout">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.oxd-userdropdown</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-26T15:23:07.823345" elapsed="1.215852"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:09.039197" level="INFO">Clicking element 'css:.oxd-userdropdown'.</msg>
+<arg>css:.oxd-userdropdown</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T15:23:09.039197" elapsed="0.073251"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath://ul[@class='oxd-dropdown-menu']/li</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-26T15:23:09.112448" elapsed="0.440474"/>
+</kw>
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:09.568546" level="INFO">@{dropdown_menu} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="cf2eb154cc6da0f65a957a6c404369fc", element="f.B5A96F6BEBF073E8CDAB3F9593537D2B.d.77A4D73F056F4ABBFCAEB02690713CC5.e.44")&gt; | &lt;selenium.webdr...</msg>
+<var>@{dropdown_menu}</var>
+<arg>xpath://ul[@class='oxd-dropdown-menu']/li</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-11-26T15:23:09.552922" elapsed="0.015624"/>
+</kw>
+<for flavor="IN">
+<iter>
+<if>
+<branch type="IF" condition="'${item.text}' == 'Logout'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-26T15:23:09.584176" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-26T15:23:09.568546" elapsed="0.015630"/>
+</branch>
+<status status="PASS" start="2024-11-26T15:23:09.568546" elapsed="0.015630"/>
+</if>
+<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="cf2eb154cc6da0f65a957a6c404369fc", element="f.B5A96F6BEBF073E8CDAB3F9593537D2B.d.77A4D73F056F4ABBFCAEB02690713CC5.e.44")&gt;</var>
+<status status="PASS" start="2024-11-26T15:23:09.568546" elapsed="0.015630"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item.text}' == 'Logout'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-26T15:23:09.584176" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-26T15:23:09.584176" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-11-26T15:23:09.584176" elapsed="0.000000"/>
+</if>
+<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="cf2eb154cc6da0f65a957a6c404369fc", element="f.B5A96F6BEBF073E8CDAB3F9593537D2B.d.77A4D73F056F4ABBFCAEB02690713CC5.e.45")&gt;</var>
+<status status="PASS" start="2024-11-26T15:23:09.584176" elapsed="0.000000"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item.text}' == 'Logout'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-11-26T15:23:09.600314" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-26T15:23:09.584176" elapsed="0.016138"/>
+</branch>
+<status status="PASS" start="2024-11-26T15:23:09.584176" elapsed="0.016138"/>
+</if>
+<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="cf2eb154cc6da0f65a957a6c404369fc", element="f.B5A96F6BEBF073E8CDAB3F9593537D2B.d.77A4D73F056F4ABBFCAEB02690713CC5.e.46")&gt;</var>
+<status status="PASS" start="2024-11-26T15:23:09.584176" elapsed="0.016138"/>
+</iter>
+<iter>
+<if>
+<branch type="IF" condition="'${item.text}' == 'Logout'">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:09.600314" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="cf2eb154cc6da0f65a957a6c404369fc", element="f.B5A96F6BEBF073E8CDAB3F9593537D2B.d.77A4D73F056F4ABBFCAEB02690713CC5.e.47")&gt;'.</msg>
+<arg>${item}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-11-26T15:23:09.600314" elapsed="0.723351"/>
+</kw>
+<status status="PASS" start="2024-11-26T15:23:09.600314" elapsed="0.724350"/>
+</branch>
+<status status="PASS" start="2024-11-26T15:23:09.600314" elapsed="0.724350"/>
+</if>
+<var name="${item}">&lt;selenium.webdriver.remote.webelement.WebElement (session="cf2eb154cc6da0f65a957a6c404369fc", element="f.B5A96F6BEBF073E8CDAB3F9593537D2B.d.77A4D73F056F4ABBFCAEB02690713CC5.e.47")&gt;</var>
+<status status="PASS" start="2024-11-26T15:23:09.600314" elapsed="0.724350"/>
+</iter>
+<var>${item}</var>
+<value>@{dropdown_menu}</value>
+<status status="PASS" start="2024-11-26T15:23:09.568546" elapsed="0.756118"/>
+</for>
+<status status="PASS" start="2024-11-26T15:23:07.822344" elapsed="2.502320"/>
+</kw>
+<kw name="Verify Logout">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h5[text()='Login']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-11-26T15:23:10.325666" elapsed="0.421035"/>
+</kw>
+<status status="PASS" start="2024-11-26T15:23:10.324664" elapsed="0.422037"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-11-26T15:23:10.833922" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../screenshots/Click%20on%20Logout.png"&gt;&lt;img src="../../screenshots/Click%20on%20Logout.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>${SCREENSHOT_DIR}/Click on Logout.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-11-26T15:23:10.746701" elapsed="0.087221"/>
+</kw>
+<kw name="Add Step" owner="Pdf">
+<arg>Logout Functionality</arg>
+<arg>${SCREENSHOT_DIR}/Click on Logout.png</arg>
+<status status="PASS" start="2024-11-26T15:23:10.833922" elapsed="0.015626"/>
+</kw>
+<kw name="Generate Final PDF" owner="common">
+<kw name="Save Pdf" owner="Pdf">
+<msg time="2024-11-26T15:23:10.865169" level="INFO">${pdf_path} = C:/Users/14192/HelloPython/robot_test_project/Results/Logout Functionality_26_11_24_15_23.pdf</msg>
+<var>${pdf_path}</var>
+<arg>${TEST_NAME}</arg>
+<status status="PASS" start="2024-11-26T15:23:10.849548" elapsed="0.015621"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-26T15:23:10.865169" level="INFO">PDF saved at C:/Users/14192/HelloPython/robot_test_project/Results/Logout Functionality_26_11_24_15_23.pdf</msg>
+<arg>PDF saved at ${pdf_path}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-26T15:23:10.865169" elapsed="0.000000"/>
+</kw>
+<arg>Logout Functionality</arg>
+<status status="PASS" start="2024-11-26T15:23:10.849548" elapsed="0.015621"/>
+</kw>
+<status status="PASS" start="2024-11-26T15:23:02.885663" elapsed="7.979506"/>
+</test>
+<doc>we are going to check login and logout functionality</doc>
+<status status="PASS" start="2024-11-26T15:22:51.354530" elapsed="19.510639"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="0" skip="0" id="s1" name="Login And Logout">Login And Logout</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
